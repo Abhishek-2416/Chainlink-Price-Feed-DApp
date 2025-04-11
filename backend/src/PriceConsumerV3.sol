@@ -18,7 +18,8 @@ contract PriceConsumerV3 {
 
     function getLatestPrice() public view returns(int){
         (,int256 price,,,) = priceFeed.latestRoundData();
-        return price / int(10 ** uint(priceFeed.decimals()));
+        // return price / int(10 ** uint(priceFeed.decimals()));
+        return price;
     }
 
     function getLatestStoredPrice() external returns(int){
