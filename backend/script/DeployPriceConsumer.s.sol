@@ -6,11 +6,11 @@ import {PriceConsumerV3} from "../src/PriceConsumerV3.sol";
 
 contract DeployPriceConsumerV3 is Script{
     function run() external{
-        //string memory sepoliaRpcURL = vm.envString("SEPOLIA_RPC_URL");
+        string memory sepoliaRpcURL = vm.envString("SEPOLIA_RPC_URL");
         string memory fujiRpcURL = vm.envString("FUJI_RPC_URL");
         uint256 privateKey = vm.envUint("PRIVATE_KEY");
 
-        vm.createSelectFork(fujiRpcURL);
+        vm.createSelectFork(sepoliaRpcURL);
 
         vm.startBroadcast(privateKey);
         //new PriceConsumerV3(0x694AA1769357215DE4FAC081bf1f309aDC325306); //Sepolia ETH/USD price Feed Address
