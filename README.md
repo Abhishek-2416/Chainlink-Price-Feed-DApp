@@ -229,13 +229,3 @@ export default App;
 npm start
 ```
 Visit http://localhost:3000 and connect MetaMask when prompted.
-
-📋 Summary
-
-Built and deployed a smart contract using Chainlink ETH/USD Price Feeds on Sepolia Testnet.
-Developed a React frontend using Ethers.js to interact with the smart contract.
-Allowed users to fetch and store the latest ETH price on-chain.
-🔗 Project Links
-
-GitHub Repository: Chainlink-Price-Feed-DApp
-Tutorial Inspiration: Chainlink: How to Build a dApp
