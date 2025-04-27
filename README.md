@@ -94,7 +94,7 @@ dotenv = ".env"
 
 7. Create .env file
 ```
-SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY
+FUJI_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY
 PRIVATE_KEY=YOUR_PRIVATE_KEY
 ```
 
