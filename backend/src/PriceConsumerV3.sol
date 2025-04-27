@@ -26,6 +26,4 @@ contract PriceConsumerV3 {
         storedPrice = getLatestPrice();
         return storedPrice;
     }
-
-
 }
