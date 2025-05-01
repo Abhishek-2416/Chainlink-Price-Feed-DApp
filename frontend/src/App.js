@@ -5,7 +5,7 @@ function App() {
   const [storedPrice, setStoredPrice] = useState('');
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const signer = provider.getSigner()
-  const contractAddress ="0x04FB1983e948BfD742f94766613C19927c14652d";
+  const contractAddress ="0xa795BFbDD4d47873C45929F03A74d3659ff634dB";
   const ABI = '[{"type":"constructor","inputs":[{"name":"_priceFeed","type":"address","internalType":"address"}],"stateMutability":"nonpayable"},{"type":"function","name":"getDecimals","inputs":[],"outputs":[{"name":"","type":"uint8","internalType":"uint8"}],"stateMutability":"view"},{"type":"function","name":"getLatestPrice","inputs":[],"outputs":[{"name":"","type":"int256","internalType":"int256"}],"stateMutability":"view"},{"type":"function","name":"getLatestStoredPrice","inputs":[],"outputs":[{"name":"","type":"int256","internalType":"int256"}],"stateMutability":"nonpayable"},{"type":"function","name":"priceFeed","inputs":[],"outputs":[{"name":"","type":"address","internalType":"contract AggregatorV3Interface"}],"stateMutability":"view"},{"type":"function","name":"storedPrice","inputs":[],"outputs":[{"name":"","type":"int256","internalType":"int256"}],"stateMutability":"view"}]'
   const contract = new ethers.Contract(contractAddress, ABI, signer);
   const getStoredPrice = async () => {
