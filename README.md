@@ -127,8 +127,16 @@ forge script script/DeployPriceConsumer.s.sol --broadcast
 Frontend Setup (React App)
 1. Create React App
 ```
+### Frontend Setup (React App)
+
 cd ..
+
+# Using npm
 npx create-react-app frontend
+
+# Or using Yarn
+yarn create react-app frontend
+
 cd frontend
 ```
 
@@ -143,7 +151,12 @@ src/App.css
 
 3. Install Required Packages
 ```
-npm install bootstrap ethers@5.7.2
+# Using npm
+npm install bootstrap ethers@5.7.2 
+
+# Or with Yarn:
+yarn add bootstrap ethers@5.7.2
+
 ```
 4. Set Up App.js
 ```
@@ -227,6 +240,10 @@ export default App;
 ```
 5. Run the Frontend
 ```
-npm start
+# Using npm
+npm run start
+
+# Or using Yarn
+yarn start
 ```
 Visit http://localhost:3000 and connect MetaMask when prompted.
