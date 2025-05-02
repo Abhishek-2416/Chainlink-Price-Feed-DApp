@@ -67,7 +67,8 @@ function App() {
   const [account, setAccount] = useState("");
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
-  const contractAddress ="0xB092ea2cd808ccbBe85175aBA67381880e5FaA1a";
+  provider.send("eth_requestAccounts", []);
+  const contractAddress ="0xDEcCa2100e8f8f87d3a9925969Ef230Ad9E91Cb7";
   const ABI = '[{"type":"constructor","inputs":[{"name":"_priceFeed","type":"address","internalType":"address"}],"stateMutability":"nonpayable"},{"type":"function","name":"getDecimals","inputs":[],"outputs":[{"name":"","type":"uint8","internalType":"uint8"}],"stateMutability":"view"},{"type":"function","name":"getLatestPrice","inputs":[],"outputs":[{"name":"","type":"int256","internalType":"int256"}],"stateMutability":"view"},{"type":"function","name":"getLatestStoredPrice","inputs":[],"outputs":[{"name":"","type":"int256","internalType":"int256"}],"stateMutability":"nonpayable"},{"type":"function","name":"priceFeed","inputs":[],"outputs":[{"name":"","type":"address","internalType":"contract AggregatorV3Interface"}],"stateMutability":"view"},{"type":"function","name":"storedPrice","inputs":[],"outputs":[{"name":"","type":"int256","internalType":"int256"}],"stateMutability":"view"}]'
   const contract = new ethers.Contract(contractAddress, ABI, signer);
  
