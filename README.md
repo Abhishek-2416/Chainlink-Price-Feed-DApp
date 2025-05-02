@@ -7,7 +7,7 @@ Users can interact with the smart contract through a React frontend.
 
 ## 🏗 Project Structure
 
-- **Backend**: Solidity smart contract deployed using Foundry on Sepolia Testnet
+- **Backend**: Solidity smart contract deployed using Foundry on Avalanche Fuji Testnet
 - **Frontend**: React.js app using Ethers.js to interact with the smart contract
 
 ---
@@ -94,7 +94,7 @@ dotenv = ".env"
 
 7. Create .env file
 ```
-FUJI_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY
+FUJI_RPC_URL=https://avax-fuji.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY
 PRIVATE_KEY=YOUR_PRIVATE_KEY
 ```
 
@@ -112,7 +112,7 @@ contract DeployPriceConsumerV3 is Script {
     function run() external {
         uint256 privateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(privateKey);
-        new PriceConsumerV3(0x694AA1769357215DE4FAC081bf1f309aDC325306); // Sepolia ETH/USD Price Feed address
+        new PriceConsumerV3(0x694AA1769357215DE4FAC081bf1f309aDC325306); // Avalanche Fuji ETH/USD Price Feed address
         vm.stopBroadcast();
     }
 }
@@ -120,6 +120,7 @@ contract DeployPriceConsumerV3 is Script {
 9. Compile and Deploy
 ```
 forge compile
+source .env
 forge script script/DeployPriceConsumer.s.sol --broadcast
 ```
 
